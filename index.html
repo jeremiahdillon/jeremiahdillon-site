@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jeremiah Dillon</title>
+  <meta name="description" content="Jeremiah Dillon is a marketing and strategy executive with twenty years at Google, Stripe, MuleSoft, and Confluent. Author of Backpressure.">
+
+  <!-- ============================================================
+    PERSON SCHEMA
+    Add more sameAs URLs as they become available:
+      - Confluent blog/team author page
+      - Any speaker bio pages with their own URL
+      - Award or list pages dedicated to you (not multi-person pages)
+      - Stanford alumni directory if public
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://jeremiahdillon.com/#person",
+        "name": "Jeremiah Dillon",
+        "url": "https://jeremiahdillon.com",
+        "email": "jeremiah.dillon@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/jeremiahdillon/",
+          "https://medium.com/@jeremiahdillon",
+          "https://www.fastcompany.com/user/jeremiah-dillon",
+          "https://x.com/jeremiahdillon",
+          "https://jeremiahdillon.substack.com/"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Confluent",
+          "url": "https://www.confluent.io"
+        },
+        "alumniOf": [
+          {
+            "@type": "EducationalOrganization",
+            "name": "Stanford Graduate School of Business",
+            "description": "MBA, General Management, 2008-2010"
+          },
+          {
+            "@type": "EducationalOrganization",
+            "name": "Stanford University",
+            "description": "BS, Industrial Engineering and Operations Research, 2001-2005"
+          }
+        ],
+        "description": "Marketing and strategy executive with twenty years of experience scaling enterprise technology companies. SVP of Product and Technical Marketing at Confluent. Former SVP of Marketing at MuleSoft and Salesforce. Former Head of Marketing, Embedded Finance at Stripe. Nine years at Google leading product marketing for Google Workspace and market intelligence for Google Cloud. Stanford MBA.",
+        "knowsAbout": [
+          "Marketing Strategy",
+          "Product Marketing",
+          "Technical Marketing",
+          "Go-to-Market Strategy",
+          "Enterprise Software",
+          "Data Streaming",
+          "Embedded Finance",
+          "Cloud Computing",
+          "Artificial Intelligence",
+          "B2B Marketing",
+          "Developer Marketing",
+          "Market Intelligence",
+          "Competitive Strategy",
+          "Chief Marketing Officer"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://jeremiahdillon.com/#website",
+        "url": "https://jeremiahdillon.com",
+        "name": "Jeremiah Dillon",
+        "author": { "@id": "https://jeremiahdillon.com/#person" }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:           #ffffff;
+      --bg-alt:       #f6f9fc;
+      --bg-subtle:    #fafbfc;
+      --text:         #0a2540;
+      --text-2:       #425466;
+      --text-3:       #8898aa;
+      --indigo:       #5851ea;
+      --indigo-deep:  #3d35c7;
+      --indigo-soft:  rgba(88, 81, 234, 0.07);
+      --indigo-mid:   rgba(88, 81, 234, 0.14);
+      --border:       #e3e8ef;
+      --border-light: #f0f4f8;
+      --shadow-sm:    0 1px 3px rgba(10,37,64,0.08), 0 1px 2px rgba(10,37,64,0.04);
+      --shadow-md:    0 4px 16px rgba(10,37,64,0.08), 0 2px 6px rgba(10,37,64,0.04);
+      --font:         'Plus Jakarta Sans', system-ui, sans-serif;
+      --max:          1100px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 2.5rem;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text-2);
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      transition: color 0.15s, background 0.15s;
+    }
+    .nav-links a:hover { color: var(--text); background: var(--bg-alt); }
+
+    .nav-cta {
+      color: var(--indigo) !important;
+      background: var(--indigo-soft) !important;
+      border: 1px solid var(--indigo-mid) !important;
+    }
+    .nav-cta:hover {
+      background: rgba(88,81,234,0.12) !important;
+      color: var(--indigo-deep) !important;
+    }
+
+    /* HERO */
+    .hero {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 6rem 2.5rem 5rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--indigo);
+      background: var(--indigo-soft);
+      border: 1px solid var(--indigo-mid);
+      padding: 0.3rem 0.85rem;
+      border-radius: 100px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--indigo);
+      flex-shrink: 0;
+    }
+
+    h1 {
+      font-size: clamp(2.75rem, 6vw, 4.25rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight {
+      background: linear-gradient(135deg, #5851ea 0%, #3d35c7 50%, #2a75f3 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.125rem;
+      font-weight: 400;
+      color: var(--text-2);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.875rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: var(--font);
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.65rem 1.375rem;
+      border-radius: 8px;
+      text-decoration: none;
+      border: none;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #5851ea, #3d35c7);
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(88,81,234,0.3), 0 1px 2px rgba(88,81,234,0.2);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #6660f0, #4a42d4);
+      box-shadow: 0 4px 16px rgba(88,81,234,0.36), 0 2px 4px rgba(88,81,234,0.2);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: var(--bg);
+      color: var(--text);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .btn-secondary:hover {
+      border-color: #c4cdd8;
+      box-shadow: var(--shadow-md);
+      transform: translateY(-1px);
+    }
+
+    .hero-logos {
+      margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .hero-logos-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-3);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .logo-strip {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo-chip {
+      font-size: 0.825rem;
+      font-weight: 700;
+      color: #b0bec9;
+      letter-spacing: -0.01em;
+    }
+
+    /* SECTIONS */
+    section { border-top: 1px solid var(--border); }
+
+    .section-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 5rem 2.5rem;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 4rem;
+    }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--indigo);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding-top: 0.3rem;
+    }
+
+    /* ABOUT */
+    .about-body p {
+      font-size: 1.0625rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+    .about-body p:last-child { margin-bottom: 0; }
+    .about-body strong { color: var(--text); font-weight: 600; }
+
+    .career-grid {
+      margin-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .career-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      align-items: start;
+      padding: 1.125rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .career-role {
+      font-size: 0.925rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .career-org {
+      font-size: 0.825rem;
+      color: var(--text-3);
+    }
+
+    .career-years {
+      font-size: 0.78rem;
+      color: var(--text-3);
+      font-weight: 500;
+      white-space: nowrap;
+      padding-top: 0.15rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* WRITING */
+    .newsletter-desc {
+      font-size: 1.0625rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+    .newsletter-desc strong { color: var(--text); font-weight: 600; }
+
+    .empty-state {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .empty-dash {
+      width: 28px; height: 2px;
+      background: var(--border);
+      margin: 0 auto 1rem;
+      border-radius: 2px;
+    }
+
+    .empty-state p {
+      font-size: 0.875rem;
+      color: var(--text-3);
+    }
+
+    /* Essay list — swap in once issues are live */
+    .essay-list { display: grid; gap: 0; }
+
+    .essay-item {
+      display: grid;
+      grid-template-columns: 3rem 1fr auto;
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border-light);
+      text-decoration: none;
+      color: inherit;
+      align-items: start;
+    }
+    .essay-item:first-child { border-top: 1px solid var(--border-light); }
+    .essay-item:hover .essay-title { color: var(--indigo); }
+
+    .essay-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-3);
+      padding-top: 0.2rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .essay-title {
+      font-size: 0.975rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+      transition: color 0.15s;
+      line-height: 1.4;
+    }
+
+    .essay-desc {
+      font-size: 0.825rem;
+      color: var(--text-3);
+      line-height: 1.5;
+    }
+
+    .essay-date {
+      font-size: 0.78rem;
+      color: var(--text-3);
+      white-space: nowrap;
+      padding-top: 0.2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid var(--border);
+      background: var(--bg-subtle);
+    }
+
+    .footer-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-copy {
+      font-size: 0.825rem;
+      color: var(--text-3);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 0.825rem;
+      font-weight: 500;
+      color: var(--text-3);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .footer-links a:hover { color: var(--text); }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-badge   { animation: fadeUp 0.4s ease both; }
+    h1            { animation: fadeUp 0.45s 0.06s ease both; }
+    .hero-sub     { animation: fadeUp 0.45s 0.12s ease both; }
+    .hero-actions { animation: fadeUp 0.45s 0.18s ease both; }
+    .hero-logos   { animation: fadeUp 0.45s 0.24s ease both; }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-inner { padding: 0 1.25rem; }
+      .hero { padding: 4rem 1.25rem 3.5rem; }
+      .section-inner {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 3.5rem 1.25rem;
+      }
+      .section-label { padding-top: 0; }
+      .footer-inner { padding: 1.75rem 1.25rem; flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .logo-strip { gap: 1.25rem; }
+      .essay-item { grid-template-columns: 2.5rem 1fr; }
+      .essay-date { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo">Jeremiah Dillon</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener" class="nav-cta">LinkedIn ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero" id="top">
+    <div class="hero-badge">Marketing &amp; Go-to-Market Strategy</div>
+    <h1>Jeremiah<br><span class="highlight">Dillon</span></h1>
+    <p class="hero-sub">
+      Building and bringing to market the infrastructure that powers the oragnizations 
+      that make the world run.
+    </p>
+    <div class="hero-actions">
+            <a href="#about" class="btn btn-secondary">About me</a>
+            <a href="#writing" class="btn btn-primary">On my mind</a>
+    </div>
+
+    <div class="hero-logos">
+      <p class="hero-logos-label">Previously</p>
+      <div class="logo-strip">
+        <span class="logo-chip">Confluent</span>
+        <span class="logo-chip">MuleSoft · Salesforce</span>
+        <span class="logo-chip">Stripe</span>
+        <span class="logo-chip">Google</span>
+        <span class="logo-chip">Amazon</span>
+        <span class="logo-chip">Stanford</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-label">About</div>
+      <div>
+        <div class="about-body">
+          <p>
+            Jeremiah Dillon is a Marketing and Go-To-Market Strategy executive with decades of
+            experience at companies building the infrastructure of the modern internet.
+            He is currently <strong>SVP of Product and Technical Marketing at Confluent</strong>,
+            the data streaming company built on Apache Kafka, Apache Flink, and Apache Iceberg.
+          </p>
+          <p>
+            Before Confluent, he was <strong>SVP of Marketing at MuleSoft</strong>, leading through
+            the functional integration into Salesforce — where MuleSoft became the fastest-growing
+            and most profitable business unit in the company. Before that, he led marketing for
+            <strong>Embedded Finance at Stripe</strong>,  launching and scaling
+            Stripe Capital, Stripe Issuing, and Stripe Treasury.
+          </p>
+          <p>
+            He spent a decade at <strong>Google</strong>, building the enterprise business unit now
+            known as Google Cloud. In his time at Google, he worked on SaaS, PaaS, and IaaS offerings
+            as Google emerged as a niche player and accelerated into a category leadership position as
+            one of the most recognized and successful hyperscale cloud service providers in the world.
+          </p>
+          <p>
+            Jeremiah holds a BS in <strong>Industrial Engineering & Operations Research from Stanford University</strong>
+            and an <strong>MBA from the Stanford Graduate School of Business</strong>.
+          </p>
+        </div>
+
+        <div class="career-grid">
+          <div class="career-row">
+            <div>
+              <div class="career-role">SVP of Product &amp; Technical Marketing</div>
+              <div class="career-org">Confluent</div>
+            </div>
+            <span class="career-years">2024 – Present</span>
+          </div>
+          <div class="career-row">
+            <div>
+              <div class="career-role">SVP of Marketing</div>
+              <div class="career-org">MuleSoft · Salesforce</div>
+            </div>
+            <span class="career-years">2022 – 2024</span>
+          </div>
+          <div class="career-row">
+            <div>
+              <div class="career-role">Head of Marketing, Embedded Finance</div>
+              <div class="career-org">Stripe</div>
+            </div>
+            <span class="career-years">2019 – 2022</span>
+          </div>
+          <div class="career-row">
+            <div>
+              <div class="career-role">Head of Market Intelligence &amp; Strategy, Google Cloud</div>
+              <div class="career-org">Google</div>
+            </div>
+            <span class="career-years">2018 – 2019</span>
+          </div>
+          <div class="career-row">
+            <div>
+              <div class="career-role">Head of Product Marketing, Google Workspace, Google Cloud</div>
+              <div class="career-org">Google</div>
+            </div>
+            <span class="career-years">2010 – 2018</span>
+          </div>
+          <div class="career-row">
+            <div>
+              <div class="career-role">MBA, General Management</div>
+              <div class="career-org">Stanford Graduate School of Business</div>
+            </div>
+            <span class="career-years">2008 – 2010</span>
+          </div>
+          <div class="career-row">
+            <div>
+              <div class="career-role">Product Manager (Intern)</div>
+              <div class="career-org">Amazon Web Services</div>
+            </div>
+            <span class="career-years">2009</span>
+          </div>
+          <div class="career-row">
+            <div>
+              <div class="career-role">BS, Industrial Engineering &amp; Operations Research</div>
+              <div class="career-org">Stanford University</div>
+            </div>
+            <span class="career-years">2001 – 2005</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRITING -->
+  <section id="writing">
+    <div class="section-inner">
+      <div class="section-label">Writing</div>
+      <div>
+        <p class="newsletter-desc">
+          For me, writing is a tool for thinking. More structure, more rigor.
+          <strong>Backpressure</strong> is my notebook, a place to jot down ideas, explore and pressure test them,
+          and see which ones survive contact with the page.
+          My focus is broadly the intersection of technology, markets, and society.
+          Periodically published on LinkedIn; indexed here as new ideas appear.
+        </p>
+
+        <!-- EMPTY STATE — replace with .essay-list block once you publish -->
+        <div class="empty-state">
+          <div class="empty-dash"></div>
+          <p>First issue coming soon.</p>
+        </div>
+
+        <!--
+          HOW TO ADD AN ESSAY — delete the empty-state div above and
+          replace it with this block, adding one .essay-item per issue:
+
+          <div class="essay-list">
+            <a class="essay-item"
+               href="https://www.linkedin.com/pulse/YOUR-SLUG-jeremiahdillon/"
+               target="_blank" rel="noopener">
+              <span class="essay-num">01</span>
+              <div>
+                <p class="essay-title">Your Essay Title Here</p>
+                <p class="essay-desc">One sentence on what this essay argues or covers.</p>
+              </div>
+              <span class="essay-date">May 2026</span>
+            </a>
+          </div>
+
+          Also add one Article schema block per essay in a
+          <script type="application/ld+json"> tag in the <head>:
+
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "@id": "https://jeremiahdillon.com/#essay-01",
+            "headline": "Your Essay Title",
+            "description": "One sentence description.",
+            "datePublished": "2026-05-27",
+            "author": { "@id": "https://jeremiahdillon.com/#person" },
+            "mainEntityOfPage": "https://www.linkedin.com/pulse/YOUR-SLUG-jeremiahdillon/"
+          }
+        -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2026 Jeremiah Dillon</span>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://x.com/jeremiahdillon" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://medium.com/@jeremiahdillon" target="_blank" rel="noopener">Medium</a></li>
+        <li><a href="https://www.fastcompany.com/user/jeremiah-dillon" target="_blank" rel="noopener">Fast Company</a></li>
+        <!--
+          Uncomment once your first Substack issue is live:
+          <li><a href="https://jeremiahdillon.substack.com/" target="_blank" rel="noopener">Substack</a></li>
+          <li><a href="mailto:xyz@gmail.com">Contact</a></li>
+        -->
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
