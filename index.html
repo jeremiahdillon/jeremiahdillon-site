@@ -74,7 +74,18 @@
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": "https://jeremiahdillon.com/#essay-01",
+    "headline": "The end of the AI free lunch",
+    "description": "On what changes when AI stops being cheap and abundant.",
+    "datePublished": "2026-05-21",
+    "author": { "@id": "https://jeremiahdillon.com/#person" },
+    "mainEntityOfPage": "https://www.linkedin.com/pulse/end-ai-free-lunch-jeremiah-dillon-sha3c"
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -493,6 +504,7 @@
     /* RESPONSIVE */
     @media (max-width: 768px) {
       .nav-inner { padding: 0 1.25rem; }
+      .nav-links li:not(:last-child) { display: none; }
       .hero { padding: 4rem 1.25rem 3.5rem; }
       .section-inner {
         grid-template-columns: 1fr;
@@ -719,9 +731,17 @@
         </p>
 
         <!-- EMPTY STATE — replace with .essay-list block once you publish -->
-        <div class="empty-state">
-          <div class="empty-dash"></div>
-          <p>First issue coming soon.</p>
+        <div class="essay-list">
+          <a class="essay-item"
+             href="https://www.linkedin.com/pulse/end-ai-free-lunch-jeremiah-dillon-sha3c"
+             target="_blank" rel="noopener">
+            <span class="essay-num">01</span>
+            <div>
+              <p class="essay-title">The end of the AI free lunch</p>
+              <p class="essay-desc">The repricing is inevitable. The rollout is under your control.</p>
+            </div>
+            <span class="essay-date">May 2026</span>
+          </a>
         </div>
 
         <!--
