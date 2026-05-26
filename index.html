@@ -83,7 +83,7 @@
     "@type": "Article",
     "@id": "https://jeremiahdillon.com/#essay-01",
     "headline": "The end of the AI free lunch",
-    "description": "On what changes when AI stops being cheap and abundant.",
+    "description": "The repricing is inevitable. The rollout is under your control.",
     "datePublished": "2026-05-21",
     "author": { "@id": "https://jeremiahdillon.com/#person" },
     "mainEntityOfPage": "https://www.linkedin.com/pulse/end-ai-free-lunch-jeremiah-dillon-sha3c"
@@ -418,12 +418,17 @@
       gap: 1rem;
       padding: 1.5rem 0;
       border-bottom: 1px solid var(--border-light);
-      text-decoration: none;
       color: inherit;
       align-items: start;
     }
     .essay-item:first-child { border-top: 1px solid var(--border-light); }
-    .essay-item:hover .essay-title { color: var(--indigo); }
+
+    .essay-title-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .essay-title-link:hover .essay-title { color: var(--indigo); }
 
     .essay-num {
       font-size: 0.75rem;
@@ -448,12 +453,27 @@
       line-height: 1.5;
     }
 
+    .essay-meta-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.35rem;
+    }
+
     .essay-date {
       font-size: 0.78rem;
       color: var(--text-3);
       white-space: nowrap;
       padding-top: 0.2rem;
     }
+
+    .essay-alt {
+      font-size: 0.7rem;
+      color: var(--text-3);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .essay-alt:hover { color: var(--text-2); }
 
     /* FOOTER */
     footer {
@@ -735,48 +755,47 @@
 
         <!-- EMPTY STATE — replace with .essay-list block once you publish -->
         <div class="essay-list">
-          <a class="essay-item"
-             href="https://www.linkedin.com/pulse/end-ai-free-lunch-jeremiah-dillon-sha3c"
-             target="_blank" rel="noopener">
+          <div class="essay-item">
             <span class="essay-num">01</span>
             <div>
-              <p class="essay-title">The end of the AI free lunch</p>
+              <a class="essay-title-link"
+                 href="https://www.linkedin.com/pulse/end-ai-free-lunch-jeremiah-dillon-sha3c"
+                 target="_blank" rel="noopener">
+                <p class="essay-title">The end of the AI free lunch</p>
+              </a>
               <p class="essay-desc">The repricing is inevitable. The rollout is under your control.</p>
             </div>
-            <span class="essay-date">May 2026</span>
-          </a>
+            <div class="essay-meta-right">
+              <span class="essay-date">May 2026</span>
+              <a class="essay-alt"
+                 href="https://medium.com/@jeremiahdillon/the-end-of-the-ai-free-lunch-56e48bebc49a"
+                 target="_blank" rel="noopener">on Medium ↗</a>
+            </div>
+          </div>
         </div>
 
         <!--
-          HOW TO ADD AN ESSAY — delete the empty-state div above and
-          replace it with this block, adding one .essay-item per issue:
+          HOW TO ADD AN ESSAY — add one .essay-item div per issue:
 
-          <div class="essay-list">
-            <a class="essay-item"
-               href="https://www.linkedin.com/pulse/YOUR-SLUG-jeremiahdillon/"
-               target="_blank" rel="noopener">
-              <span class="essay-num">01</span>
-              <div>
+          <div class="essay-item">
+            <span class="essay-num">02</span>
+            <div>
+              <a class="essay-title-link"
+                 href="https://www.linkedin.com/pulse/YOUR-SLUG-jeremiahdillon/"
+                 target="_blank" rel="noopener">
                 <p class="essay-title">Your Essay Title Here</p>
-                <p class="essay-desc">One sentence on what this essay argues or covers.</p>
-              </div>
-              <span class="essay-date">May 2026</span>
-            </a>
+              </a>
+              <p class="essay-desc">One sentence on what this essay argues or covers.</p>
+            </div>
+            <div class="essay-meta-right">
+              <span class="essay-date">Jun 2026</span>
+              <a class="essay-alt"
+                 href="https://medium.com/@jeremiahdillon/YOUR-MEDIUM-SLUG"
+                 target="_blank" rel="noopener">on Medium ↗</a>
+            </div>
           </div>
 
-          Also add one Article schema block per essay in a
-          <script type="application/ld+json"> tag in the <head>:
-
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            "@id": "https://jeremiahdillon.com/#essay-01",
-            "headline": "Your Essay Title",
-            "description": "One sentence description.",
-            "datePublished": "2026-05-27",
-            "author": { "@id": "https://jeremiahdillon.com/#person" },
-            "mainEntityOfPage": "https://www.linkedin.com/pulse/YOUR-SLUG-jeremiahdillon/"
-          }
+          Also add one Article schema block per essay in the <head>.
         -->
       </div>
     </div>
