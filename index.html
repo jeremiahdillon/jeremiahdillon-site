@@ -8,7 +8,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="canonical" href="https://jeremiahdillon.com/">
 
-  <!-- Open Graph / Twitter: link-preview metadata for social shares. Add og:image / twitter:image once a headshot is available, then switch twitter:card to summary_large_image. -->
+  <!-- Open Graph / Twitter: link-preview metadata for social shares. -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://jeremiahdillon.com/">
   <meta property="og:title" content="Jeremiah Dillon | Product &amp; Technical Marketing Executive">
@@ -124,8 +124,8 @@
     "inLanguage": "en",
     "author": { "@id": "https://jeremiahdillon.com/#person" },
     "publisher": { "@id": "https://jeremiahdillon.com/#person" },
-    "url": "https://www.linkedin.com/pulse/end-ai-free-lunch-jeremiah-dillon-sha3c",
-    "mainEntityOfPage": "https://www.linkedin.com/pulse/end-ai-free-lunch-jeremiah-dillon-sha3c"
+    "url": "https://jeremiahdillon.com/writing/end-of-the-ai-free-lunch/",
+    "mainEntityOfPage": "https://jeremiahdillon.com/writing/end-of-the-ai-free-lunch/"
   }
   </script>
 
@@ -134,14 +134,14 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "@id": "https://jeremiahdillon.com/#essay-02",
-    "headline": "Meet ATLAS, my travel agent... agent",
+    "headline": "Meet ATLAS, my travel agent… agent",
     "description": "My first agent that was immediately useful, with some asterisks.",
-    "datePublished": "2026-05",
+    "datePublished": "2026-05-28",
     "inLanguage": "en",
     "author": { "@id": "https://jeremiahdillon.com/#person" },
     "publisher": { "@id": "https://jeremiahdillon.com/#person" },
-    "url": "https://www.linkedin.com/pulse/meet-atlas-my-travel-agent-jeremiah-dillon-sjqvc/",
-    "mainEntityOfPage": "https://www.linkedin.com/pulse/meet-atlas-my-travel-agent-jeremiah-dillon-sjqvc/"
+    "url": "https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/",
+    "mainEntityOfPage": "https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/"
   }
   </script>
 
@@ -584,6 +584,14 @@
       padding-top: 0.2rem;
     }
 
+    .essay-alts {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      white-space: nowrap;
+    }
+    .essay-alts .sep { color: var(--border); font-size: 0.7rem; }
+
     .essay-alt {
       font-size: 0.7rem;
       color: var(--text-3);
@@ -663,7 +671,7 @@
       .logo-strip { gap: 1.25rem; }
       .essay-item { grid-template-columns: 2.5rem 1fr; }
       .essay-date { display: none; }
-      .essay-alt { display: none; }
+      .essay-alts { display: none; }
     }
 
     /* WHY SECTION */
@@ -968,34 +976,44 @@
             <span class="essay-num">01</span>
             <div>
               <a class="essay-title-link"
-                 href="https://www.linkedin.com/pulse/end-ai-free-lunch-jeremiah-dillon-sha3c"
-                 target="_blank" rel="noopener">
+                 href="writing/end-of-the-ai-free-lunch/">
                 <p class="essay-title">The end of the AI free lunch</p>
               </a>
               <p class="essay-desc">The repricing is inevitable. The rollout is under your control.</p>
             </div>
             <div class="essay-meta-right">
               <span class="essay-date">5 min read</span>
-              <a class="essay-alt"
-                 href="https://medium.com/@jeremiahdillon/the-end-of-the-ai-free-lunch-56e48bebc49a"
-                 target="_blank" rel="noopener">on Medium ↗</a>
+              <span class="essay-alts">
+                <a class="essay-alt"
+                   href="https://www.linkedin.com/pulse/end-ai-free-lunch-jeremiah-dillon-sha3c/"
+                   target="_blank" rel="noopener">LinkedIn ↗</a>
+                <span class="sep">·</span>
+                <a class="essay-alt"
+                   href="https://medium.com/@jeremiahdillon/the-end-of-the-ai-free-lunch-56e48bebc49a"
+                   target="_blank" rel="noopener">Medium ↗</a>
+              </span>
             </div>
           </div>
           <div class="essay-item">
             <span class="essay-num">02</span>
             <div>
               <a class="essay-title-link"
-                 href="https://www.linkedin.com/pulse/meet-atlas-my-travel-agent-jeremiah-dillon-sjqvc/"
-                 target="_blank" rel="noopener">
-                <p class="essay-title">Meet 🤖 ATLAS, my travel agent... agent</p>
+                 href="writing/meet-atlas-my-travel-agent/">
+                <p class="essay-title">Meet 🤖 ATLAS, my travel agent… agent</p>
               </a>
               <p class="essay-desc">My first agent that was immediately useful, with some asterisks.</p>
             </div>
             <div class="essay-meta-right">
               <span class="essay-date">6 min read</span>
-              <a class="essay-alt"
-                 href="https://medium.com/@jeremiahdillon/meet-atlas-my-travel-agent-agent-e355d54e1eb7"
-                 target="_blank" rel="noopener">on Medium ↗</a>
+              <span class="essay-alts">
+                <a class="essay-alt"
+                   href="https://www.linkedin.com/pulse/meet-atlas-my-travel-agent-jeremiah-dillon-sjqvc/"
+                   target="_blank" rel="noopener">LinkedIn ↗</a>
+                <span class="sep">·</span>
+                <a class="essay-alt"
+                   href="https://medium.com/@jeremiahdillon/meet-atlas-my-travel-agent-agent-e355d54e1eb7"
+                   target="_blank" rel="noopener">Medium ↗</a>
+              </span>
             </div>
           </div>
         </div>
@@ -1140,7 +1158,6 @@
   <footer>
     <div class="footer-inner">
       <div style="display: flex; flex-direction: column; gap: 0.3rem;">
-        <span class="footer-copy">© 2026 Jeremiah Dillon</span>
         <span class="footer-copy">Coded with Claude Opus 4.8 · <a href="https://github.com/jeremiahdillon/jeremiahdillon-site" target="_blank" rel="noopener" style="color: inherit;">Source on GitHub</a> · Served via Vercel</span>
       </div>
       <ul class="footer-links">

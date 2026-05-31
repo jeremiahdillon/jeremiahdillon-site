@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet ATLAS, my travel agent… agent | Jeremiah Dillon</title>
+  <meta name="description" content="A sandboxed travel-disruption monitor built in about an hour with Claude and run on an open-weight model — my first AI agent that paid back its build time immediately, with some asterisks.">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="canonical" href="https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/">
+  <meta property="og:title" content="Meet ATLAS, my travel agent… agent">
+  <meta property="og:description" content="My first agent that was immediately useful, with some asterisks. A sandboxed travel-disruption monitor built in about an hour.">
+  <meta property="og:image" content="https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/header.jpg">
+  <meta property="og:site_name" content="Jeremiah Dillon">
+  <meta property="article:published_time" content="2026-05-28T00:00:00Z">
+  <meta property="article:author" content="https://jeremiahdillon.com/">
+  <meta property="article:section" content="Technology">
+  <meta property="article:tag" content="Artificial Intelligence">
+  <meta property="article:tag" content="AI Agents">
+  <meta property="article:tag" content="Agentic AI">
+  <meta property="article:tag" content="Travel">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Meet ATLAS, my travel agent… agent">
+  <meta name="twitter:description" content="My first agent that was immediately useful, with some asterisks. A sandboxed travel-disruption monitor built in about an hour.">
+  <meta name="twitter:image" content="https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/header.jpg">
+  <meta name="twitter:creator" content="@jeremiahdillon">
+
+  <!-- ============================================================
+    BLOGPOSTING SCHEMA — author/publisher reference the #person
+    node defined on the homepage (index.html).
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/#article",
+    "headline": "Meet ATLAS, my travel agent… agent",
+    "alternativeHeadline": "My first agent that was immediately useful, with some asterisks.",
+    "description": "ATLAS paid back his build time faster than any agent I've built, while being the least powerful version of himself — a sandboxed travel-disruption monitor built in about an hour with Claude, running on an open-weight model.",
+    "image": "https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/header.jpg",
+    "datePublished": "2026-05-28",
+    "dateModified": "2026-05-28",
+    "inLanguage": "en",
+    "author": { "@id": "https://jeremiahdillon.com/#person" },
+    "publisher": { "@id": "https://jeremiahdillon.com/#person" },
+    "url": "https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/",
+    "mainEntityOfPage": "https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/",
+    "sameAs": [
+      "https://www.linkedin.com/pulse/meet-atlas-my-travel-agent-jeremiah-dillon-sjqvc/",
+      "https://medium.com/@jeremiahdillon/meet-atlas-my-travel-agent-agent-e355d54e1eb7"
+    ],
+    "articleSection": "Technology",
+    "keywords": [
+      "Artificial Intelligence",
+      "AI Agents",
+      "Agentic AI",
+      "Open-Weight Models",
+      "Local AI",
+      "Claude",
+      "Qwen",
+      "Travel Technology",
+      "Automation",
+      "Human-in-the-Loop"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jeremiahdillon.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Writing", "item": "https://jeremiahdillon.com/#writing" },
+      { "@type": "ListItem", "position": 3, "name": "Meet ATLAS, my travel agent… agent", "item": "https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../article.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../../" class="nav-logo">Jeremiah Dillon</a>
+      <ul class="nav-links">
+        <li><a href="../../#about">About</a></li>
+        <li><a href="../../#writing">Writing</a></li>
+        <li><a href="../../#why">Why?</a></li>
+        <li><a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener" class="nav-cta">LinkedIn ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="article-wrap">
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../../">Home</a>
+      <span class="sep">/</span>
+      <a href="../../#writing">Writing</a>
+      <span class="sep">/</span>
+      <span aria-current="page">Meet ATLAS, my travel agent… agent</span>
+    </nav>
+
+    <article>
+      <!-- HEADER -->
+      <header class="article-header">
+        <p class="article-eyebrow">Essay</p>
+        <h1 class="article-title">Meet ATLAS, my travel agent… agent</h1>
+        <p class="article-dek">My first agent that was immediately useful, with some asterisks.</p>
+        <div class="article-meta">
+          <span class="author">Jeremiah Dillon</span>
+          <span class="dot">·</span>
+          <time datetime="2026-05-28">May 28, 2026</time>
+          <span class="dot">·</span>
+          <span>6 min read</span>
+        </div>
+      </header>
+
+      <!-- LEAD IMAGE -->
+      <figure class="article-lead">
+        <img src="header.jpg" alt="Header illustration for Meet ATLAS, my travel agent agent.">
+      </figure>
+
+      <!-- BODY -->
+      <div class="article-body">
+        <p>ATLAS paid back his build time faster than any agent I've built, while being the least powerful version of himself. ATLAS helped me triage several incidents that threatened to disrupt my recent trip to London, but he runs in a sandbox with no access to my email, my calendar, or any of the information that would make him maximally useful (and dangerous) in the real world. He still got me through a busy week of work travel without constantly refreshing my browser tabs.</p>
+
+        <h2>The Friction</h2>
+
+        <p>I love to travel. But sixty countries in, I've never been fully satisfied with a single travel tool. They all feel like sales funnels with a search box bolted on. So for decades I've planned manually. Generative AI (Claude and Perplexity) has become a fixture in my process, but that's a reactive pattern. Sometimes travel requires something more proactive. Exhibit A, headlines like: "Lufthansa cuts 20,000 flights as war squeezes fuel prices and supplies." Details were thin, cancellations were being announced on a rolling basis, and I had several trips to Europe on the calendar. A clear setup for frustration. My old approach would have been to refresh the same browser tabs every morning. After doing this for a week, I decided I'd rather build something instead.</p>
+
+        <h2>My Priors</h2>
+
+        <p>Going in, I expected monitoring to be the easy part — the web is full of news about disruptions. The hard part would be filtering signal from noise. This isn't my first agent, so I expected I'd have to take several runs at it to get it right, but I had a work trip to London in just a few days so, no time like the present!</p>
+
+        <p>I did ask myself whether this needed to be an agent at all. A daily Google Alert would have given me UK news; an RSS feed for FlightAware would have covered specific flights. But this wouldn't be quite right. What I really wanted was something that knew where I was going, could run continuously in the background, could think expansively about what might disrupt my travels, could rank each risk by how much it should matter, and then could track individual issues through to resolution instead of just notifying me again and again. That's not search; that's a small operations function. So I built an agent.</p>
+
+        <h2>What I Actually Built</h2>
+
+        <p>ATLAS runs locally on a Mac Studio (more on that choice in a future post.) I primarily communicate with my agents via Telegram, so in this case I just cut and paste snippets of my itinerary (flight details or hotel dates) into the chat. ATLAS normalizes the info and builds a progressive profile of each trip in a simple JSON file.</p>
+
+        <p>A cron job runs periodically and searches for signals that might affect upcoming trips: public holidays, airport disruptions, travel advisories, weather as the trip gets close. Each potential finding gets two ratings: confidence and severity. These scores are combined and weighed against a dynamic threshold that tightens as each trip approaches. Imminent signals push to my phone immediately. The rest queue for a weekly digest.</p>
+
+        <p>The surprise was how well this worked from the start. To be fair, ATLAS isn't my first agent, so I already had OpenClaw deployed, local models loaded, my security posture tuned, Telegram wired up, and my key preferences and guardrails captured in template personality files. ATLAS came together in about an hour, built with Claude, on the framework I'd already developed for prior agents. The novel work here was the tracking model: independent confidence and severity axes, structured fingerprints so the same disruption described differently on consecutive days resolves to the same open issue, and regular re-alert milestones. Despite my initial skepticism, I didn't need to enumerate all of the issues I did and didn't care about. ATLAS picked up the signal right off the bat.</p>
+
+        <h2>The Upside</h2>
+
+        <p>Two days before my London trip, ATLAS surfaced three issues on his first run. The UK had upgraded its terror alert to severe, with guidance to avoid crowded sites (I was headed out for a conference, so good to know.) Heathrow was running hundreds of delayed flights due to a luggage-handling problem, unlikely to affect my arrival but a risk for the return. And a tube strike was planned for the day I landed, which would have turned the trip from LHR to Excel into a slow-motion mess.</p>
+
+        <figure>
+          <img src="atlas-issues.webp" alt="Screenshot of ATLAS surfacing and tracking three travel-disruption issues ahead of a London trip.">
+          <figcaption>ATLAS surfaced and ranked three disruptions ahead of the London trip, then tracked each to resolution.</figcaption>
+        </figure>
+
+        <p>ATLAS tracked all three issues day by day. When the airport recovered, he closed the issue. When the tube strike was called off the night before my flight, he pushed an update saying I could sleep in instead of leaving at 4 a.m. for the Elizabeth Line backup route he had already mapped. I wasn't living in my Chrome tabs, refreshing news sites all week. The digest just showed up every morning.</p>
+
+        <h2>The Asterisks</h2>
+
+        <p>The honest limitation is trust. ATLAS lives in a sandbox with no access to my email, my calendar, or anything sensitive. Other agents I've built have their own Google accounts so I can forward them emails, but I didn't set this up for ATLAS. The sandbox approach is designed to limit the blast radius if something goes wrong. While it would be nice and easy to forward airline itineraries or hotel confirmations to ATLAS, these emails typically contain enough information (e.g. name and booking code) to alter or cancel reservations. I don't yet trust the homegrown agents I can build in an hour with the keys to that castle. This is why I manually paste sanitized trip details into Telegram.</p>
+
+        <p>To be clear about what "trust" means here: it isn't infrastructure trust. The hardware sits on my desk in my home office. I own it. The trust gap is the model. While ATLAS was built with Claude, he runs on Qwen 3.5 27B, an open-weight model from Alibaba (I addressed shifting token economics in a <a href="../end-of-the-ai-free-lunch/">prior post</a>.) Qwen is pretty impressive for a model that fits in a 28GB RAM envelope, but let's just say I've noticed that it's very eager for autonomy (I ask a question and it strings together a long series of autonomous actions) and its tool calling is less than perfect (maybe an unexpected result 5% to 10% of the time.) As time goes to infinity, there are going to be some missteps. And that's before I even worry about a risk like prompt injection.</p>
+
+        <h2>The Scorecard</h2>
+
+        <p>On the dimensions that matter: build effort was negligible, just an hour on top of infrastructure I'd already deployed. This is the fastest time-to-value of anything I've built. Time saved was modest, maybe fifteen minutes a day of news-checking. The real value was peace of mind: I knew I'd be alerted to any new issues, and that I'd receive periodic updates as existing issues evolved or were resolved.</p>
+
+        <p>Verdict: I'd build it again, and I'd recommend it to anyone with multiple trips on the calendar who's tired of checking the same news sites every morning. I've already queued up my summer travel for ATLAS to track. But building ATLAS made me think I shouldn't have had to build him at all. Clear value out of the gate, but so much less convenient than he should be because of the trust and access issues. This is an obvious candidate for Google to build into Gmail, or for another provider to offer as a hardened plugin. Hopefully a product manager somewhere is working on that.</p>
+
+        <div class="code-window">
+          <div class="code-titlebar">
+            <span class="code-dot dot-red"></span>
+            <span class="code-dot dot-yellow"></span>
+            <span class="code-dot dot-green"></span>
+            <span class="code-filename">atlas.spec</span>
+          </div>
+          <div class="code-body">
+<pre><code><span class="tok-hd"># UNDER THE HOOD</span>
+
+<span class="tok-lbl">AGENT NAME</span>  <span class="tok-pun">:</span> <span class="tok-str">ATLAS</span>
+<span class="tok-lbl">WHAT IT DOES</span><span class="tok-pun">:</span> <span class="tok-str">Monitors upcoming trips for disruptions, tracks</span>
+              <span class="tok-str">issues through to resolution, and delivers proactive</span>
+              <span class="tok-str">alerts and weekly digests via Telegram.</span>
+<span class="tok-lbl">RUNS ON</span>     <span class="tok-pun">:</span> <span class="tok-str">Mac Studio M4 Max, 40-core GPU, 64GB unified memory</span>
+<span class="tok-lbl">BUILT WITH</span>  <span class="tok-pun">:</span> <span class="tok-str">Claude Sonnet 4.6</span>
+<span class="tok-lbl">RUNTIME</span>     <span class="tok-pun">:</span> <span class="tok-str">Qwen 3.5 27B via Ollama &amp; OpenClaw (fallback: Gemma4 26B)</span>
+<span class="tok-lbl">TOOLS</span>       <span class="tok-pun">:</span> <span class="tok-str">Telegram (interactive intake + alert delivery),</span>
+              <span class="tok-str">Brave Search API (daily research)</span>
+<span class="tok-lbl">AUTONOMY</span>    <span class="tok-pun">:</span> <span class="tok-str">Human-in-the-loop to initiate trip coverage,</span>
+              <span class="tok-str">fully autonomous for research and alerting</span>
+<span class="tok-lbl">MEMORY</span>      <span class="tok-pun">:</span> <span class="tok-str">Persistent structured state in JSON files (itinerary,</span>
+              <span class="tok-str">open issues, digest queue, monitoring config), plus a</span>
+              <span class="tok-str">long-term memory.md + nightly dreaming for pattern</span>
+              <span class="tok-str">recognition</span>
+<span class="tok-lbl">BUILD TIME</span>  <span class="tok-pun">:</span> <span class="tok-str">~1 hour</span></code></pre>
+          </div>
+        </div>
+
+        <p class="article-colophon">Drafted with Claude Opus 4.7 · Hand crafted in Google Docs · Header image generated in Google Imagen 3</p>
+      </div>
+
+      <!-- DISTRIBUTION / CANONICAL NOTE -->
+      <div class="distribution">
+        <span>Also published on</span>
+        <a href="https://www.linkedin.com/pulse/meet-atlas-my-travel-agent-jeremiah-dillon-sjqvc/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <span class="dot">·</span>
+        <a href="https://medium.com/@jeremiahdillon/meet-atlas-my-travel-agent-agent-e355d54e1eb7" target="_blank" rel="noopener">Medium ↗</a>
+      </div>
+
+      <!-- AUTHOR BIO -->
+      <aside class="author-bio">
+        <img src="../../jeremiah-dillon-photo.jpg" alt="Jeremiah Dillon">
+        <div>
+          <div class="author-bio-name"><a href="../../">Jeremiah Dillon</a></div>
+          <p class="author-bio-text">Jeremiah Dillon is a product and technical marketing executive. For two decades he has taken breakthrough technology from bottoms-up adoption to global enterprise scale at Google, Stripe, MuleSoft and Salesforce, and Confluent. He writes about the intersection of technology, markets, and society as well as his own experience building and experimenting with the latest tech.</p>
+          <div class="author-bio-links">
+            <a href="../../">jeremiahdillon.com</a>
+            <a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://medium.com/@jeremiahdillon" target="_blank" rel="noopener">Medium</a>
+            <a href="https://x.com/jeremiahdillon" target="_blank" rel="noopener">X</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- FOOTER NAV -->
+      <div class="article-foot-nav">
+        <a href="../../#writing" class="back-to-writing">← All writing</a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+        <span class="footer-copy">Coded with Claude Opus 4.8 · <a href="https://github.com/jeremiahdillon/jeremiahdillon-site" target="_blank" rel="noopener">Source on GitHub</a> · Served via Vercel</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/jeremiahdillon" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/jeremiahdillon" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://medium.com/@jeremiahdillon" target="_blank" rel="noopener">Medium</a></li>
+        <li><a href="https://www.fastcompany.com/user/jeremiah-dillon" target="_blank" rel="noopener">Fast Company</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../article.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+# ── macOS / OS cruft ──
+.DS_Store
+.DS_Store?
+._*
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+Icon
+# Windows
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# ── Editors / IDEs ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ── Secrets / credentials / env ──
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.p12
+*.pfx
+secrets.json
+credentials.json
+*credentials*
+*secret*
+.indexnow-key
+indexnow*.txt
+
+# ── Python (writing/optimize-image.py) ──
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# ── Node (if build tooling is added later) ──
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ── Logs / temp ──
+*.log
+tmp/
+.cache/
