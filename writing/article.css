@@ -367,7 +367,7 @@ nav {
   align-items: center;
   justify-content: center;
   padding: 2.5rem;
-  background: rgba(10, 37, 64, 0.55);
+  background: rgba(10, 37, 64, 0.66);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   cursor: zoom-out;
@@ -377,8 +377,8 @@ nav {
 .lightbox.open { opacity: 1; }
 .lightbox[hidden] { display: none; }
 .lightbox img {
-  max-width: 95vw;
-  max-height: 92vh;
+  max-width: 82vw;
+  max-height: 80vh;
   width: auto;
   height: auto;
   border-radius: 8px;
