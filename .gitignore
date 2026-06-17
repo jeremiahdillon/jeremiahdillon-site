@@ -21,6 +21,10 @@ desktop.ini
 *.sublime-project
 *.sublime-workspace
 
+# ── FUSE temporary hidden files ── 
+.fuse*
+*.fuse*
+
 # ── Secrets / credentials / env ──
 .env
 .env.*
