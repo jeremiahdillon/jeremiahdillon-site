@@ -40,7 +40,7 @@
     "@type": "BlogPosting",
     "@id": "https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/#article",
     "headline": "No shade, but that agent should have been a Python script",
-    "alternativeHeadline": "Agentic problems come in three shapes. We keep building the hardest one.",
+    "alternativeHeadline": "Agentic problems come in three shapes. We keep overengineering them into the hardest one.",
     "description": "Agentic problems come in three shapes: a script, a script with one model call, or a real agent. Most \"agents\" should have been a script — and knowing which is which is the skill to build.",
     "image": "https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/header.jpg",
     "datePublished": "2026-06-18",
@@ -115,7 +115,7 @@
       <header class="article-header">
         <p class="article-eyebrow">Essay</p>
         <h1 class="article-title">No shade, but that agent should have been a Python script</h1>
-        <p class="article-dek">Agentic problems come in three shapes. We keep building the hardest one.</p>
+        <p class="article-dek">Agentic problems come in three shapes. We keep overengineering them into the hardest one.</p>
         <div class="article-meta">
           <span class="author">Jeremiah Dillon</span>
           <span class="dot">·</span>
@@ -135,7 +135,7 @@
       <div class="article-body">
         <p>I learned this lesson by building (and rebuilding) an agent to keep up with my kids' schools, reading the board packets and calendars and surfacing the few things that actually touch my family. One early task was deciding when two listings were the same event under different names: "Spring Picnic" here, "Encinal Spring Picnic" there. Obviously a job for intelligence, I figured, so I reached for the intelligent tool and used a semantic embedding model to match them. On short titles it was worse than useless, confidently scoring two unrelated events as identical. What I settled on instead was dumb token overlap, about as far from machine learning as you can get, and it has been right ever since.</p>
 
-        <p>I knew the embedding model was overkill. I <strong>reached for it anyway, because reaching for the smartest-looking option is the reflex right now, and because building the harder and more impressive version is how you learn.</strong> By the third rebuild of this agent, <a href="../meet-matilda-my-school-briefing-agent/">MATILDA</a>, that reflex had flipped. I'd catch a task where the answer was sitting right there in the input, a comparison or a lookup. Don't invoke the LLM, just write the script. The script still lives inside the agent. It just doesn't need a model in the loop to run.</p>
+        <p>I knew the embedding model was overkill. <strong>I reached for it anyway, because reaching for the smartest-looking option is the reflex right now, and because building the harder and more impressive version is how you learn.</strong> By the third rebuild of this agent, <a href="../meet-matilda-my-school-briefing-agent/">MATILDA</a>, that reflex had flipped. I'd catch a task where the answer was sitting right there in the input, a comparison or a lookup. Don't invoke the LLM, just write the script. The script still lives inside the agent. It just doesn't need a model in the loop to run.</p>
 
         <p>That instinct, knowing which steps deserve a model and which don't, is the thing worth developing this year. Almost nobody has it yet.</p>
 
@@ -166,7 +166,7 @@
 
         <p>Those costs don't add up so much as multiply. A pipeline that's 95% reliable at every step is only about 36% reliable across twenty steps. The same chain built deterministically is right and verifiable every time, by construction. Stack enough model calls where you needed none and congrats: <strong>you've converted a sure thing into a coin flip</strong>.</p>
 
-        <p>None of this is speculative. Salesforce spent 2024 as the loudest voice for autonomous agents, then published a <a href="https://www.salesforce.com/agentforce/resources/reliable-ai-agents-guide/" target="_blank" rel="noopener">reliability guide</a> admitting that prompt-driven agents skip steps, ignore rules, and hallucinate, and built a feature that converts "always" and "never" instructions into deterministic logic that runs every time. <a href="https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396" target="_blank" rel="noopener">Klarna</a> ran a similar arc, rolling automation across customer service and then rehiring people once it was clear the agent was fine for the routine majority of tickets and a liability on the minority that genuinely needed a person. Neither is a story about agents failing. Both are stories about organizations learning they pointed agents at the wrong problem. Even Anthropic, whose business depends on selling models, says this in its own <a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener">guidance</a>: if a workflow is predictable, encode it as software, and favor simple, composable workflows over elaborate autonomous ones.</p>
+        <p>None of this is speculative. Salesforce spent 2024 as the loudest voice for autonomous agents, then published a <a href="https://www.salesforce.com/agentforce/resources/reliable-ai-agents-guide/" target="_blank" rel="noopener">reliability guide</a> admitting that prompt-driven agents skip steps, ignore rules, and hallucinate, and built a feature that converts "always" and "never" instructions into deterministic logic that runs every time. Klarna ran a <a href="https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396" target="_blank" rel="noopener">similar arc</a>, rolling automation across customer service and then rehiring people once it was clear the agent was fine for the routine majority of tickets and a liability on the minority that genuinely needed a person. Neither is a story about agents failing. Both are stories about organizations learning they pointed agents at the wrong problem. Even Anthropic, whose business depends on selling models, says this in its own <a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener">guidance</a>: if a workflow is predictable, encode it as software, and favor simple, composable workflows over elaborate autonomous ones.</p>
 
         <h2>Mind the tokenmaxxing trough</h2>
 
@@ -180,7 +180,7 @@
 
         <p>The most important thing to learn in 2026 might be how to build an agent. The second most important thing to learn is when not to.</p>
 
-        <p class="article-colophon">Drafted with Claude Opus 4.8 · Hand crafted in Google Docs · Header image generated in Google Imagen 3</p>
+        <p class="article-colophon">Researched with Gemini and Perplexity · Drafted with Claude Opus 4.8 · Hand crafted in Google Docs · Header image generated in Google Imagen 3</p>
       </div>
 
       <!-- AUTHOR BIO -->
