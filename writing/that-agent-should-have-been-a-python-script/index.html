@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No shade, but that agent should have been a Python script | Jeremiah Dillon</title>
+  <meta name="description" content="Agentic problems come in three shapes: a script, a script with one model call, or a real agent. Most &quot;agents&quot; should have been a script — and knowing which is which is the skill to build.">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="canonical" href="https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/">
+  <meta property="og:title" content="No shade, but that agent should have been a Python script">
+  <meta property="og:description" content="Most &quot;agents&quot; should have been a script. The skill worth building in 2026 is knowing which problem actually needs a model — and which doesn't.">
+  <meta property="og:image" content="https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/header.jpg">
+  <meta property="og:site_name" content="Jeremiah Dillon">
+  <meta property="article:published_time" content="2026-06-18T00:00:00Z">
+  <meta property="article:author" content="https://jeremiahdillon.com/">
+  <meta property="article:section" content="Technology">
+  <meta property="article:tag" content="Artificial Intelligence">
+  <meta property="article:tag" content="AI Agents">
+  <meta property="article:tag" content="AI Engineering">
+  <meta property="article:tag" content="AI Strategy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="No shade, but that agent should have been a Python script">
+  <meta name="twitter:description" content="Most &quot;agents&quot; should have been a script. The skill worth building in 2026 is knowing which problem actually needs a model — and which doesn't.">
+  <meta name="twitter:image" content="https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/header.jpg">
+  <meta name="twitter:creator" content="@jeremiahdillon">
+
+  <!-- ============================================================
+    BLOGPOSTING SCHEMA — author/publisher reference the #person
+    node defined on the homepage (index.html).
+    PASS 1: no "sameAs" yet (no LinkedIn/Medium mirrors). PASS 2:
+    after cross-posting, add a "sameAs" array with both URLs.
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/#article",
+    "headline": "No shade, but that agent should have been a Python script",
+    "alternativeHeadline": "Agentic problems come in three shapes. We keep building the hardest one.",
+    "description": "Agentic problems come in three shapes: a script, a script with one model call, or a real agent. Most \"agents\" should have been a script — and knowing which is which is the skill to build.",
+    "image": "https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/header.jpg",
+    "datePublished": "2026-06-18",
+    "dateModified": "2026-06-18",
+    "inLanguage": "en",
+    "author": { "@id": "https://jeremiahdillon.com/#person" },
+    "publisher": { "@id": "https://jeremiahdillon.com/#person" },
+    "url": "https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/",
+    "mainEntityOfPage": "https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/",
+    "articleSection": "Technology",
+    "keywords": [
+      "AI Agents",
+      "Agentic AI",
+      "Large Language Models",
+      "Workflow Automation",
+      "AI Engineering",
+      "Determinism",
+      "Inference Cost",
+      "Tokenmaxxing",
+      "Bitter Lesson",
+      "AI Strategy",
+      "Anthropic"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jeremiahdillon.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Writing", "item": "https://jeremiahdillon.com/#writing" },
+      { "@type": "ListItem", "position": 3, "name": "No shade, but that agent should have been a Python script", "item": "https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../article.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../../" class="nav-logo">Jeremiah Dillon</a>
+      <ul class="nav-links">
+        <li><a href="../../#about">About</a></li>
+        <li><a href="../../#writing">Writing</a></li>
+        <li><a href="../../#why">Why?</a></li>
+        <li><a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener" class="nav-cta">LinkedIn ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="article-wrap">
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../../">Home</a>
+      <span class="sep">/</span>
+      <a href="../../#writing">Writing</a>
+      <span class="sep">/</span>
+      <span aria-current="page">No shade, but that agent should have been a Python script</span>
+    </nav>
+
+    <article>
+      <!-- HEADER -->
+      <header class="article-header">
+        <p class="article-eyebrow">Essay</p>
+        <h1 class="article-title">No shade, but that agent should have been a Python script</h1>
+        <p class="article-dek">Agentic problems come in three shapes. We keep building the hardest one.</p>
+        <div class="article-meta">
+          <span class="author">Jeremiah Dillon</span>
+          <span class="dot">·</span>
+          <time datetime="2026-06-18">June 18, 2026</time>
+          <span class="dot">·</span>
+          <span>6 min read</span>
+        </div>
+      </header>
+
+      <!-- LEAD IMAGE -->
+      <figure class="article-lead">
+        <img src="header.jpg" alt="Header illustration for No shade, but that agent should have been a Python script.">
+        <figcaption>Generated by Gemini (Google Imagen 3)</figcaption>
+      </figure>
+
+      <!-- BODY -->
+      <div class="article-body">
+        <p>I learned this lesson by building (and rebuilding) an agent to keep up with my kids' schools, reading the board packets and calendars and surfacing the few things that actually touch my family. One early task was deciding when two listings were the same event under different names: "Spring Picnic" here, "Encinal Spring Picnic" there. Obviously a job for intelligence, I figured, so I reached for the intelligent tool and used a semantic embedding model to match them. On short titles it was worse than useless, confidently scoring two unrelated events as identical. What I settled on instead was dumb token overlap, about as far from machine learning as you can get, and it has been right ever since.</p>
+
+        <p>I knew the embedding model was overkill. I <strong>reached for it anyway, because reaching for the smartest-looking option is the reflex right now, and because building the harder and more impressive version is how you learn.</strong> By the third rebuild of this agent, <a href="../meet-matilda-my-school-briefing-agent/">MATILDA</a>, that reflex had flipped. I'd catch a task where the answer was sitting right there in the input, a comparison or a lookup. Don't invoke the LLM, just write the script. The script still lives inside the agent. It just doesn't need a model in the loop to run.</p>
+
+        <p>That instinct, knowing which steps deserve a model and which don't, is the thing worth developing this year. Almost nobody has it yet.</p>
+
+        <p>Part of why is counterintuitive. The natural-language interface flipped the difficulty gradient: describing an agent in plain English and watching it move now feels more approachable than writing twenty lines of Python. The truth is that the same AI will write those twenty lines for you in seconds, but the semantics of the code are exposed and that can be intimidating. A script is plumbing, and screams at you that you don't know how it works. An agent feels like the future, and buries the black-box complexity underneath friendly prose. We've started preferring the highly complex thing that appears easy to the very straightforward thing that feels cryptic.</p>
+
+        <h2>Most "agents" are doing one of three jobs</h2>
+
+        <p>The work comes in three shapes, and I'll start where most people do these days: with the full AI-orchestrated agent. MATILDA runs all three at once (the full build is <a href="../meet-matilda-my-school-briefing-agent/">its own post</a>), which is how I tuned my instinct for these distinctions.</p>
+
+        <p><strong>Sometimes only a model will do.</strong> The path can't be drawn in advance and the job is reasoning over genuinely ambiguous context. Deciding which update buried in a thousand-page school board packet actually matters to my kids, across their different grades and campuses, is not something I can easily write as a rule. A coding agent finding its way around a repo it has never seen is the same shape. Here the model isn't decoration. It's the only thing that works, and the complexity is earned.</p>
+
+        <p>Most of what gets called an agent isn't doing that.</p>
+
+        <p><strong>More often, it should be a script with one model call.</strong> The orchestration is deterministic and exactly one step is genuinely fuzzy, so it earns a single invocation. When MATILDA sorts a new item under the right topic, the model returns that one decision and a line of code writes it to the state file. The agent isn't deciding what tool to use, the model never touches the state file itself. The mistake here isn't using the model, it's wrapping the whole pipeline in an autonomous loop when 90% of it is plumbing the model should never touch.</p>
+
+        <p><strong>And often, a script is all you need.</strong> A price monitor that pings you when a number drops is a cron job and a comparison. An inventory alert is <code>if stock &lt; threshold</code>. Inside MATILDA, parsing the calendar feeds and rendering the next ten days is plain date math, with no model anywhere. Wrapping any of this in an agent only adds latency, cost, and a chance of hallucination to a problem that had none of the three.</p>
+
+        <p>Strip the gloss off most things labeled an agent and you find a problem fit for one of these last two: a script, or a script with a single model call.</p>
+
+        <figure>
+          <img src="agent-decision-flowchart.svg" alt="Decision flowchart: three questions to ask before building an agent, routing a problem to a script, a script with one model call, or a full agent.">
+          <figcaption>Before you build that agent, ask these three questions.</figcaption>
+        </figure>
+
+        <h2>Four ways the heavy tool loses</h2>
+
+        <p>When an agent does a script's job, it loses on four fronts at once. <strong>It costs more</strong>, because every step is a GPU-heavy model call standing in for what could be near-free CPU. <strong>It runs slower</strong>, turning a sub-second operation into ten or thirty seconds of inference time. <strong>It's non-deterministic</strong>, so the same input can wander down a different path tomorrow. And <strong>it's hard to audit</strong>, because when it fails you get a plausible-sounding story about what happened instead of a stack trace you can scrutinize.</p>
+
+        <p>Those costs don't add up so much as multiply. A pipeline that's 95% reliable at every step is only about 36% reliable across twenty steps. The same chain built deterministically is right and verifiable every time, by construction. Stack enough model calls where you needed none and congrats: <strong>you've converted a sure thing into a coin flip</strong>.</p>
+
+        <p>None of this is speculative. Salesforce spent 2024 as the loudest voice for autonomous agents, then published a <a href="https://www.salesforce.com/agentforce/resources/reliable-ai-agents-guide/" target="_blank" rel="noopener">reliability guide</a> admitting that prompt-driven agents skip steps, ignore rules, and hallucinate, and built a feature that converts "always" and "never" instructions into deterministic logic that runs every time. <a href="https://www.entrepreneur.com/business-news/klarna-ceo-reverses-course-by-hiring-more-humans-not-ai/491396" target="_blank" rel="noopener">Klarna</a> ran a similar arc, rolling automation across customer service and then rehiring people once it was clear the agent was fine for the routine majority of tickets and a liability on the minority that genuinely needed a person. Neither is a story about agents failing. Both are stories about organizations learning they pointed agents at the wrong problem. Even Anthropic, whose business depends on selling models, says this in its own <a href="https://www.anthropic.com/research/building-effective-agents" target="_blank" rel="noopener">guidance</a>: if a workflow is predictable, encode it as software, and favor simple, composable workflows over elaborate autonomous ones.</p>
+
+        <h2>Mind the tokenmaxxing trough</h2>
+
+        <p>AI is a big enough domain to run several hype cycles at once, and we'll live through plenty of them. The one we're tipping into now is the ROI reckoning: the tokenmaxxing day-two where the spend gets scrutinized and the value question turns sharp. You can see it in the restrictions starting to land at companies, often set off by a small number of people burning an enormous number of tokens. <strong>Unfortunately, this tightening is arriving before the average person has built a single valuable agent of their own.</strong></p>
+
+        <p>That's the part I'd be careful about. The case for leaning into experimentation is real. Burning tokens to build fluency is how a lot of us (me included) got the instinct in the first place, and I'm still doing it. But fluency with the tools and instinct about when to apply them are different skills. <strong>Instinct is the one the market is short on.</strong> If the correction overshoots, we clamp down before the median person has even started climbing the learning curve.</p>
+
+        <p>Over the long run, if Rich Sutton's <a href="http://www.incompleteideas.net/IncIdeas/BitterLesson.html" target="_blank" rel="noopener">bitter lesson</a> holds, this guidance will flip. General methods that lean on raw computation tend to beat the clever handcrafted ones over time. Follow it to the end and the script-first instinct is exactly the kind of human cleverness that cheaper compute probably steamrolls eventually. But that's a bet on an environment we're not in yet. Compute is the scarce and expensive resource of this moment, not the free one, and "just throw the model at every problem" is the solution for a future that hasn't arrived. When inference is unconstrained, revisit the question. Until then, know when to reach for the script.</p>
+
+        <p>The way through isn't a ban on agents, and it isn't unlimited token spend either. It's the plain discipline of asking, before you build, whether you could just draw the flowchart. MATILDA's first move every morning is a script asking whether anything changed at all; most mornings the answer is no and no model runs. <strong>If you can draw the flowchart, just write the script.</strong> Save the agent for the problem that genuinely needs one. Knowing which is which will be a real advantage for the individual who has it. Figuring out how to teach and reinforce this across an organization will be a competitive advantage for the companies that pull it off first.</p>
+
+        <p>The most important thing to learn in 2026 might be how to build an agent. The second most important thing to learn is when not to.</p>
+
+        <p class="article-colophon">Drafted with Claude Opus 4.8 · Hand crafted in Google Docs · Header image generated in Google Imagen 3</p>
+      </div>
+
+      <!-- AUTHOR BIO -->
+      <aside class="author-bio">
+        <img src="../../jeremiah-dillon-photo.jpg" alt="Jeremiah Dillon">
+        <div>
+          <div class="author-bio-name"><a href="../../">Jeremiah Dillon</a></div>
+          <p class="author-bio-text">Jeremiah Dillon is a product and technical marketing executive. For two decades he has taken breakthrough technology from bottoms-up adoption to global enterprise scale at Google, Stripe, MuleSoft and Salesforce, and Confluent. He writes about the intersection of technology, markets, and society as well as his own experience building and experimenting with the latest tech.</p>
+          <div class="author-bio-links">
+            <a href="../../">jeremiahdillon.com</a>
+            <a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://medium.com/@jeremiahdillon" target="_blank" rel="noopener">Medium</a>
+            <a href="https://x.com/jeremiahdillon" target="_blank" rel="noopener">X</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- FOOTER NAV -->
+      <div class="article-foot-nav">
+        <a href="../../#writing" class="back-to-writing">← All writing</a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+        <span class="footer-copy">Coded with Claude Opus 4.8 · <a href="https://github.com/jeremiahdillon/jeremiahdillon-site" target="_blank" rel="noopener">Source on GitHub</a> · Served via Vercel</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/jeremiahdillon" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/jeremiahdillon" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://medium.com/@jeremiahdillon" target="_blank" rel="noopener">Medium</a></li>
+        <li><a href="https://www.fastcompany.com/user/jeremiah-dillon" target="_blank" rel="noopener">Fast Company</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="../article.js" defer></script>
+
+  <!-- Vercel Web Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
