@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The latent liability of unreviewed work | Jeremiah Dillon</title>
+  <meta name="description" content="Frontier AI output still ships with errors. Code has tests and review to catch them; knowledge work mostly has none. A cross-model review loop closes the gap.">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="canonical" href="https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/">
+  <meta property="og:title" content="The latent liability of unreviewed work">
+  <meta property="og:description" content="AI-generated code is full of errors. The fact that we know this is encouraging. Knowledge work is surely much worse.">
+  <meta property="og:image" content="https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/header.jpg">
+  <meta property="og:site_name" content="Jeremiah Dillon">
+  <meta property="article:published_time" content="2026-10-06T00:00:00Z">
+  <meta property="article:author" content="https://jeremiahdillon.com/">
+  <meta property="article:section" content="Technology">
+  <meta property="article:tag" content="Artificial Intelligence">
+  <meta property="article:tag" content="AI Verification">
+  <meta property="article:tag" content="Code Review">
+  <meta property="article:tag" content="Knowledge Work">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The latent liability of unreviewed work">
+  <meta name="twitter:description" content="AI-generated code is full of errors. The fact that we know this is encouraging. Knowledge work is surely much worse.">
+  <meta name="twitter:image" content="https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/header.jpg">
+  <meta name="twitter:creator" content="@jeremiahdillon">
+
+  <!-- ============================================================
+    BLOGPOSTING SCHEMA — author/publisher reference the #person
+    node defined on the homepage (index.html).
+    PASS 1: no "sameAs" yet (no LinkedIn/Medium mirrors). PASS 2:
+    after cross-posting, add a "sameAs" array with both URLs.
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": "https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/#article",
+    "headline": "The latent liability of unreviewed work",
+    "alternativeHeadline": "AI-generated code is full of errors. The fact that we know this is encouraging. Knowledge work is surely much worse.",
+    "description": "Frontier AI output still ships with errors. Code has tests and review to catch them; knowledge work mostly has none. A cross-model review loop closes the gap.",
+    "image": "https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/header.jpg",
+    "datePublished": "2026-10-06",
+    "dateModified": "2026-10-06",
+    "inLanguage": "en",
+    "author": { "@id": "https://jeremiahdillon.com/#person" },
+    "publisher": { "@id": "https://jeremiahdillon.com/#person" },
+    "url": "https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/",
+    "mainEntityOfPage": "https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/",
+    "articleSection": "Technology",
+    "keywords": [
+      "AI Verification",
+      "Verification Debt",
+      "Cross-Model Review",
+      "Adversarial Review",
+      "AI Code Review",
+      "Knowledge Work",
+      "LLM Reliability",
+      "AI Agents",
+      "Workslop",
+      "Frontier Models"
+    ],
+    "video": {
+      "@type": "VideoObject",
+      "name": "Six review rounds to converge to zero issues",
+      "description": "Animated chart of a cross-model review loop: Opus 5.5 writes, DeepSeek v4.1 Flash reviews, Opus 5.5 fixes. Six rounds, 26 issues found and fixed, $0.0553 in reviewer API cost.",
+      "thumbnailUrl": "https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/review-loop-poster.webp",
+      "contentUrl": "https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/review-loop.mp4",
+      "uploadDate": "2026-10-06",
+      "duration": "PT26S"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://jeremiahdillon.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Writing", "item": "https://jeremiahdillon.com/#writing" },
+      { "@type": "ListItem", "position": 3, "name": "The latent liability of unreviewed work", "item": "https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../article.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../../" class="nav-logo">Jeremiah Dillon</a>
+      <ul class="nav-links">
+        <li><a href="../../#about">About</a></li>
+        <li><a href="../../#writing">Writing</a></li>
+        <li><a href="../../#why">Why?</a></li>
+        <li><a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener" class="nav-cta">LinkedIn ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="article-wrap">
+
+    <!-- BREADCRUMB -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../../">Home</a>
+      <span class="sep">/</span>
+      <a href="../../#writing">Writing</a>
+      <span class="sep">/</span>
+      <span aria-current="page">The latent liability of unreviewed work</span>
+    </nav>
+
+    <article>
+      <!-- HEADER -->
+      <header class="article-header">
+        <p class="article-eyebrow">Essay</p>
+        <h1 class="article-title">The latent liability of unreviewed work</h1>
+        <p class="article-dek">AI-generated code is full of errors. The fact that we know this is encouraging. Knowledge work is surely much worse.</p>
+        <div class="article-meta">
+          <span class="author">Jeremiah Dillon</span>
+          <span class="dot">·</span>
+          <time datetime="2026-10-06">October 6, 2026</time>
+          <span class="dot">·</span>
+          <span>8 min read</span>
+        </div>
+      </header>
+
+      <!-- LEAD IMAGE -->
+      <figure class="article-lead">
+        <img src="header.jpg" width="1600" height="893" alt="The cracked marble base of a polished column in a grand office lobby, with rubble scattered on the floor.">
+        <figcaption>Generated by Gemini (Google Imagen 3)</figcaption>
+      </figure>
+
+      <!-- BODY -->
+      <div class="article-body">
+        <p>Opus 5.5 is a big upgrade over 4.8. (No lie: I skipped 5 entirely.) It debuted at number one on the <a href="https://artificialanalysis.ai/models/claude-opus-5-5" target="_blank" rel="noopener">Artificial Analysis Intelligence Index</a>, five points ahead of GPT-6 Astra and Fable 5.1. Despite all of that, it still makes mistakes every time I use it. I know this because any time I have Opus do a meaningful chunk of work, I run it through an adversarial review. A second model, from a different lab, reads the work in a fresh session and tries to break it. These days that reviewer is DeepSeek v4.1 Flash, and it usually costs about a penny per round of review.</p>
+
+        <p>On almost every significant piece of work, the DeepSeek reviewer finds something serious. In almost every case Opus agrees with the finding and fixes it. So while weaker models are prone to hallucinations, I'm quite confident these are real because Opus is acking them. Real errors, consistently delivered in frontier output, caught for pocket change.</p>
+
+        <p>An assumption of our education system is that when you do the work yourself, you understand it as you build it. Our new hope as we shift to AI doing much of the work is that we understand it as we review it. Unfortunately, today plenty of work in circulation is neither written nor reviewed by anybody. Werner Vogels calls the gap <a href="https://leaddev.com/ai/you-cant-verify-all-the-ai-generated-code" target="_blank" rel="noopener">verification debt</a>. Each unreviewed error is a latent liability. It's already in the work. It just hasn't surfaced yet.</p>
+
+        <h2>The next model drop won't fix it</h2>
+
+        <p>Models are becoming more powerful at an astounding rate. It's tempting to think that each release will shrink the problem until errors are rare enough to ignore. That utopian moment seems to be far in our future.</p>
+
+        <p>Whether a piece of work comes out clean depends on two things: how often the model makes an error at any given step, and how many individual steps the work takes. Here, the number of steps isn't always driven by the length of the work, but rather by the complexity of the work and the number of micro-decisions that the model must make. A two-page brief might sit on top of reams of research, analysis, and synthesis. Better models lower the error rate. At the same time, our ambition extends the horizon of work and increases the complexity.</p>
+
+        <p>Take the industry's favorite progress metric: METR's <a href="https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/" target="_blank" rel="noopener">task-horizon research</a>. This measure shows how long a task, in skilled human time, each new model can complete. It finds that the horizon is doubling about every seven months. That's exponential improvement: roughly 3x a year, 10x every two years. Pundits cite those horizons like gospel. I suspect few of them know that the horizon is measured at 50% reliability. This means that the given model will complete a task of that complexity correctly half the time. A literal coin flip. In practice, this is exactly how we use the models. Our appetite for 'more' outweighs our patience for 'better'.</p>
+
+        <p>The arithmetic shows why that matters. If a model gets each step right 99% of the time, a 10-step task comes out clean about nine times in ten. A 100-step task comes out clean only about one time in three. Every gain in reliability buys a more complex task at the same odds. And we keep choosing the more complex task.</p>
+
+        <figure>
+          <img src="compounding-errors.webp" width="1920" height="1080" alt="Chart titled 'Better models buy more complex tasks at the same odds'. Three curves show the chance a task finishes with zero errors against steps per task on a log scale, at 99%, 99.9% and 99.99% per-step reliability. At 99%, a 10-step task is clean 90% of the time and a 100-step task 37%. The 50% line is crossed at 69, 693 and 6,931 steps: each 10x gain in reliability buys a 10x more complex task at the same odds.">
+          <figcaption>Illustrative: the chance of a clean run is per-step reliability raised to the number of steps.</figcaption>
+        </figure>
+
+        <p>There's a second limit. Even putting errors aside, some of what a reviewer flags comes from guesses the builder made about things nobody specified: who the audience is, which constraint matters, what 'done' means. A more capable model doesn't close those gaps. It just fills them with more confident guesses.</p>
+
+        <h2>Code is the best case, and it's still full of latent errors</h2>
+
+        <p>Coding is at the frontier of applied AI, and for good reason. Today, writing code is what these models do best, and code is unusual in how much of its quality a machine can check. Compilers reject what doesn't parse. Tests confirm behavior. Static analysis catches whole classes of bugs, vulnerabilities, and maintainability problems before the software ever runs. A machine may not be able to tell you whether the code does what the business actually needs, but it can check most of the rest. Decades of engineering discipline sit on top of those checks: review as a norm, pipelines that block a bad merge, an ecosystem built around code quality. AI raises the stakes on all of it, because teams now ship far more code than anyone has the time or attention to read line-by-line.</p>
+
+        <p>Even against this backdrop, the foundation is showing cracks. Code that everyone assumed was hardened and clean for decades has started to wilt under the scrutiny of frontier models like <a href="https://red.anthropic.com/2026/mythos-preview" target="_blank" rel="noopener">Mythos</a> and increasingly capable open-weight models like <a href="https://venturebeat.com/technology/glm-5-3-is-here-with-advanced-cyber-capabilities-and-reportedly-already-found-a-serious-vulnerability-in-cursor" target="_blank" rel="noopener">GLM 5.3</a>. Serious <a href="../if-anyone-has-the-sword-everyone-needs-the-shield/">vulnerabilities</a> have been found across every major operating system and browser, many of them lying dormant in the code for 10 or even 20 years. Decades of expert review missed them. The errors were there all along. The instruments of scrutiny have gotten better. This does not bode well for the nearly <a href="https://blog.jetbrains.com/research/2026/08/how-much-code-do-developers-really-let-agents-write/" target="_blank" rel="noopener">50% of code</a> that is fully generated by AI.</p>
+
+        <p>I don't build real software, but like any good vibe coder I have written more code this year than I have since university. Claude is a much better coder than me, so I have neither the desire nor capacity to review it all line-by-line. So I had Claude build my own <a href="https://github.com/jeremiahdillon/claude-code-delegate/" target="_blank" rel="noopener">review loop as a script and skill pack</a>: first Claude writes, then calls another model to review inside the loop, then iterates until the review comes back clean. A fairly simple approach. To validate it, I turned the loop back on itself. Opus said it was done and ready to ship. DeepSeek disagreed. It took six rounds and 26 unique fixes before the review loop converged. Many of these new issues actually emerged as a result of Opus fixing a previously flagged issue.</p>
+
+        <!-- Play-once video: starts when scrolled into view, holds the
+             final frame, click to replay (see article.js). The poster is
+             the final frame, shown when autoplay or motion is off. -->
+        <figure class="article-video">
+          <video src="review-loop.mp4" poster="review-loop-poster.webp" width="1920" height="1080" muted playsinline preload="metadata" data-play-once aria-label="Animated chart titled 'Six review rounds to converge to zero issues': Opus 5.5 writes, DeepSeek v4.1 Flash reviews, Opus 5.5 fixes. Issues found and fixed per round are 9, 5, 7, 3, 2 and then 0, for 26 issues found, 26 fixed and none ignored, at a total reviewer API cost of $0.0553."></video>
+          <figcaption>The review loop validating itself: six rounds, 26 issues found and fixed, $0.0553 in reviewer API calls.</figcaption>
+        </figure>
+
+        <h2>Most knowledge work has no automated verification</h2>
+
+        <p>Step outside code and the rigorous verification regimes evaporate. A strategy memo doesn't compile. A research report has no test suite. A marketing plan has no linter. We never built much automated validation for strategy and knowledge work because we expected the person who wrote it to deeply understand it.</p>
+
+        <p>Now that expectation is violated. A growing share of work is produced by AI, and a declining share of work is carefully reviewed before it's sent off to a colleague or customer. Here be errors: a market size resting on an assumption nobody stated, a statistic with no source behind it, a claim about a competitor nobody verified, a fact invented from whole cloth by matrix math rounded off into words. All of it a probability distribution with no sense of objective truth. Code keeps its liabilities on the books, in failing tests, open issues, and analyzer reports. Knowledge work keeps all of the debt off the balance sheet. It only surfaces later when someone downstream trips over it.</p>
+
+        <p>Sometimes this happens in public. Deloitte <a href="https://www.fastcompany.com/91417492/deloitte-ai-report-australian-government" target="_blank" rel="noopener">refunded</a> the Australian government for a report containing a fabricated quote and references to papers that don't exist. More often, the errors compound in silence. An invented number in a research brief becomes an input to the strategy memo. Then a line in the board deck. Then a talking point in the press release. Then a ticking clock waiting to be cited in a lawsuit. Each step adds unearned confidence and strips away the audit trail back to the source. This is the dreaded <a href="https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity" target="_blank" rel="noopener">workslop</a>: output that looks finished but shifts the real labor onto whoever receives it. By the time someone catches the error, it has propagated into everything built on top of it.</p>
+
+        <h2>A model made the problem, use a different model to catch it</h2>
+
+        <p>The obvious move is to ask the model to check its own work. Prompt engineering hilarity ensues: 'Make no mistakes.' If that worked, it would already be in every system prompt. Spoiler: it isn't, because it doesn't. <a href="https://arxiv.org/abs/2310.01798" target="_blank" rel="noopener">Research on self-correction</a> finds that models struggle to spot their own reasoning errors. They also <a href="https://arxiv.org/abs/2404.13076" target="_blank" rel="noopener">rate their own output</a> more favorably than output from another model. A reviewer that's a carbon copy of the builder, working in an identical context, inherits all of the builder's assumptions, blind spots, and defects.</p>
+
+        <p>What works is independence, and it's why my review loop is built the way it is: the reviewer starts a fresh session with none of the builder's context, runs a model from a different lab, and gets a prompt that asks it to disagree. Research shows that each model has its own <a href="https://www.sonarsource.com/blog/the-coding-personalities-of-leading-llms/" target="_blank" rel="noopener">characteristic blind spots</a>, so a second model is uniquely capable of catching what the first couldn't see.</p>
+
+        <p>AI was supposed to make our lives easier, right? This sounds complicated and slow and expensive. It's not. My review skill covers code, analysis, writing, and more. Claude can run it without a single manual keystroke from me. The six-round run above cost less than six cents in OpenRouter calls. Yes, there are more moving parts, but it runs iteratively as a loop inside the build and burns down the issue list until everything checks out. It's no more work for me. I never read the original reasoning traces from Opus. By the same token, I never read these rounds of review from DeepSeek. I scan the summary and mediate a disagreement between models if needed.</p>
+
+        <p>At the end of the day, the only thing this costs is compute. That's not nothing, but, all things being equal, if you weigh a handful of additional tokens spent on generation against a handful of tokens spent on review, the calculus is clear: put your money on review.</p>
+
+        <h2>Review catches errors. Rules stop them from recurring.</h2>
+
+        <p>A review loop fixes the work in front of it. On its own, it doesn't improve the work that comes next.</p>
+
+        <p>In my experience, most findings are one-off slips: a wrong number, a broken reference, or a hallucinated dependency. Fix them for cheap and move on. But some findings are systemic: an error that keeps recurring, or a gap in the spec where the builder had to guess at a requirement nobody wrote down. Those must become rules, approved by a person, that continuously update the instructions that define the next piece of work.</p>
+
+        <p>This is where the math starts working in your favor. Errors compound as tasks get more complex. Rules compound too, because every rule narrows the set of systemic errors the model might make and improves the ability of the reviewer to catch anything that slips through. Software teams are starting to build factories: closed-loop systems that are engineered instead of prompted. Knowledge workers need to be building factories of their own where review stops being a cost paid on each piece of work and starts being part of the machinery that produces it. Build that and you'll get bigger tasks and less slop.</p>
+
+        <p>Personally, I'm a bit nonplussed about all of the Pangram-fueled AI shaming. You should be using AI in your work. But if you are, you should be able to answer this question: when a mistake gets made, who catches it? If the honest answer today is that it's your customer, the liability has already come due.</p>
+
+        <p class="article-colophon">Drafted with Claude Opus 5.5 · Reviewed by DeepSeek v4.1 Flash · Shaped by my <a href="https://github.com/jeremiahdillon/skills/blob/main/writing/long-form-essay-voice/SKILL.md" target="_blank" rel="noopener">long-form-essay-voice skill</a> · Header image generated in Google Imagen 3</p>
+      </div>
+
+      <!-- DISTRIBUTION / CANONICAL NOTE — PASS 2: after cross-posting,
+           add the .distribution block here with the LinkedIn/Medium
+           URLs (copy it from writing/_template/index.html). -->
+
+      <!-- AUTHOR BIO -->
+      <aside class="author-bio">
+        <img src="../../jeremiah-dillon-photo.jpg" alt="Jeremiah Dillon">
+        <div>
+          <div class="author-bio-name"><a href="../../">Jeremiah Dillon</a></div>
+          <p class="author-bio-text">Jeremiah Dillon is a product and technical marketing executive. For two decades he has taken breakthrough technology from bottoms-up adoption to global enterprise scale at Google, Stripe, MuleSoft and Salesforce, and Confluent. He writes about the intersection of technology, markets, and society as well as his own experience building and experimenting with the latest tech.</p>
+          <div class="author-bio-links">
+            <a href="../../">jeremiahdillon.com</a>
+            <a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://medium.com/@jeremiahdillon" target="_blank" rel="noopener">Medium</a>
+            <a href="https://x.com/jeremiahdillon" target="_blank" rel="noopener">X</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- FOOTER NAV -->
+      <div class="article-foot-nav">
+        <a href="../../#writing" class="back-to-writing">← All writing</a>
+      </div>
+
+    </article>
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+        <span class="footer-copy">Coded with Claude Opus 4.8 · <a href="https://github.com/jeremiahdillon/jeremiahdillon-site" target="_blank" rel="noopener">Source on GitHub</a> · Served via Vercel</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/jeremiahdillon" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/jeremiahdillon" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://medium.com/@jeremiahdillon" target="_blank" rel="noopener">Medium</a></li>
+        <li><a href="https://www.fastcompany.com/user/jeremiah-dillon" target="_blank" rel="noopener">Fast Company</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Shared lightbox + play-once video behavior. -->
+  <script src="../article.js" defer></script>
+
+  <!-- Vercel Web Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>

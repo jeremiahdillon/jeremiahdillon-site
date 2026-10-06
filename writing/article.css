@@ -355,6 +355,32 @@ nav {
 .tok-num { color: #b5cea8; }                     /* number         — soft green    */
 .tok-pun { color: #808080; }                     /* punctuation    — gray          */
 
+/* ---------- PLAY-ONCE VIDEO ----------
+   <figure class="article-video"><video data-play-once …> — plays once
+   when scrolled into view, then holds its final frame (article.js). */
+.article-body figure video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+  background: #0b0c10;
+  cursor: pointer;
+}
+.video-replay {
+  font: inherit;
+  color: var(--indigo);
+  background: none;
+  border: 0;
+  padding: 0;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.video-replay:hover { text-decoration: underline; }
+.video-replay:focus-visible { outline: 2px solid var(--indigo); outline-offset: 3px; border-radius: 4px; }
+
 /* ---------- LIGHTBOX ---------- */
 .article-body figure img,
 .article-lead img { cursor: zoom-in; }
