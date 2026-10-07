@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing | Jeremiah Dillon</title>
+  <meta name="description" content="Essays by Jeremiah Dillon on the intersection of technology, markets, and society: AI economics, agents, open-weight models, and security.">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="canonical" href="https://jeremiahdillon.com/writing/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jeremiahdillon.com/writing/">
+  <meta property="og:title" content="Writing | Jeremiah Dillon">
+  <meta property="og:description" content="Essays by Jeremiah Dillon on the intersection of technology, markets, and society: AI economics, agents, open-weight models, and security.">
+  <meta property="og:image" content="https://jeremiahdillon.com/jeremiah-dillon-photo.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="399">
+  <meta property="og:image:alt" content="Jeremiah Dillon">
+  <meta property="og:site_name" content="Jeremiah Dillon">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Writing | Jeremiah Dillon">
+  <meta name="twitter:description" content="Essays by Jeremiah Dillon on the intersection of technology, markets, and society: AI economics, agents, open-weight models, and security.">
+  <meta name="twitter:image" content="https://jeremiahdillon.com/jeremiah-dillon-photo.jpg">
+  <meta name="twitter:creator" content="@jeremiahdillon">
+
+  <!-- ============================================================
+    BLOG SCHEMA — the catalog of every essay. One "blogPost" entry
+    per article, NEWEST FIRST, each pointing at the article's own
+    BlogPosting @id (…/writing/<slug>/#article). Keep this list in
+    sync with the visible .essay-list below. author/publisher
+    reference the #person node defined on the homepage.
+  ============================================================ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Blog",
+        "@id": "https://jeremiahdillon.com/writing/#blog",
+        "url": "https://jeremiahdillon.com/writing/",
+        "name": "Writing by Jeremiah Dillon",
+        "description": "Essays by Jeremiah Dillon on the intersection of technology, markets, and society: AI economics, agents, open-weight models, and security.",
+        "inLanguage": "en",
+        "author": {
+          "@id": "https://jeremiahdillon.com/#person"
+        },
+        "publisher": {
+          "@id": "https://jeremiahdillon.com/#person"
+        },
+        "isPartOf": {
+          "@id": "https://jeremiahdillon.com/#website"
+        },
+        "blogPost": [
+          {
+            "@type": "BlogPosting",
+            "@id": "https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/#article",
+            "headline": "The latent liability of unreviewed work",
+            "description": "AI-generated code is full of errors. The fact that we know this is encouraging. Knowledge work is surely much worse.",
+            "datePublished": "2026-10-06",
+            "author": {
+              "@id": "https://jeremiahdillon.com/#person"
+            },
+            "url": "https://jeremiahdillon.com/writing/latent-liability-of-unreviewed-work/"
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://jeremiahdillon.com/writing/if-anyone-has-the-sword-everyone-needs-the-shield/#article",
+            "headline": "If anyone has the sword, everyone needs the shield",
+            "description": "Offense gets cheaper and faster with every model drop. Defense is still slow and expensive.",
+            "datePublished": "2026-09-18",
+            "author": {
+              "@id": "https://jeremiahdillon.com/#person"
+            },
+            "url": "https://jeremiahdillon.com/writing/if-anyone-has-the-sword-everyone-needs-the-shield/"
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://jeremiahdillon.com/writing/how-to-outrun-the-red-queen/#article",
+            "headline": "How to outrun the Red Queen",
+            "description": "The labs are racing each other. The rest of the stack is racing the labs.",
+            "datePublished": "2026-07-18",
+            "author": {
+              "@id": "https://jeremiahdillon.com/#person"
+            },
+            "url": "https://jeremiahdillon.com/writing/how-to-outrun-the-red-queen/"
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/#article",
+            "headline": "No shade, but that agent should have been a Python script",
+            "description": "Agentic problems come in three shapes. We keep overengineering them into the hardest one.",
+            "datePublished": "2026-06-18",
+            "author": {
+              "@id": "https://jeremiahdillon.com/#person"
+            },
+            "url": "https://jeremiahdillon.com/writing/that-agent-should-have-been-a-python-script/"
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://jeremiahdillon.com/writing/meet-matilda-my-school-briefing-agent/#article",
+            "headline": "Meet MATILDA, my school briefing agent",
+            "description": "MATILDA happily reads the 1,000+ page school board packet so I don't have to.",
+            "datePublished": "2026-06-12",
+            "author": {
+              "@id": "https://jeremiahdillon.com/#person"
+            },
+            "url": "https://jeremiahdillon.com/writing/meet-matilda-my-school-briefing-agent/"
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://jeremiahdillon.com/writing/soul-suggests-weights-decide/#article",
+            "headline": "The soul suggests. The weights decide.",
+            "description": "Every model has a worldview. Have you checked yours?",
+            "datePublished": "2026-06-02",
+            "author": {
+              "@id": "https://jeremiahdillon.com/#person"
+            },
+            "url": "https://jeremiahdillon.com/writing/soul-suggests-weights-decide/"
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/#article",
+            "headline": "Meet ATLAS, my travel agent… agent",
+            "description": "My first agent that was immediately useful, with some asterisks.",
+            "datePublished": "2026-05-26",
+            "author": {
+              "@id": "https://jeremiahdillon.com/#person"
+            },
+            "url": "https://jeremiahdillon.com/writing/meet-atlas-my-travel-agent/"
+          },
+          {
+            "@type": "BlogPosting",
+            "@id": "https://jeremiahdillon.com/writing/end-of-the-ai-free-lunch/#article",
+            "headline": "The end of the AI free lunch",
+            "description": "The repricing is inevitable. The rollout is under your control.",
+            "datePublished": "2026-05-21",
+            "author": {
+              "@id": "https://jeremiahdillon.com/#person"
+            },
+            "url": "https://jeremiahdillon.com/writing/end-of-the-ai-free-lunch/"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://jeremiahdillon.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Writing",
+            "item": "https://jeremiahdillon.com/writing/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="article.css">
+
+  <style>
+    /* Writing index — list styles mirror the homepage essay rows. */
+    .writing-wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+    .writing-header { margin-bottom: 2.5rem; }
+    .writing-title {
+      font-size: clamp(2rem, 5vw, 2.85rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+    .writing-intro {
+      font-size: 1.0625rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      max-width: 680px;
+    }
+
+    .essay-list { display: grid; gap: 0; }
+    .essay-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1.5rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border-light);
+      align-items: start;
+    }
+    .essay-item:first-child { border-top: 1px solid var(--border-light); }
+    .essay-title-link { text-decoration: none; color: inherit; display: block; }
+    .essay-title-link:hover .essay-title { color: var(--indigo); }
+    .essay-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+      transition: color 0.15s;
+      line-height: 1.4;
+    }
+    .essay-desc { font-size: 0.875rem; color: var(--text-3); line-height: 1.55; }
+    .essay-meta-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.35rem;
+    }
+    .essay-date {
+      font-size: 0.78rem;
+      color: var(--text-3);
+      white-space: nowrap;
+      padding-top: 0.2rem;
+    }
+    .essay-alts { display: flex; align-items: center; gap: 0.5rem; white-space: nowrap; }
+    .essay-alts .sep { color: var(--border); font-size: 0.7rem; }
+    .essay-alt {
+      font-size: 0.7rem;
+      color: var(--text-3);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .essay-alt:hover { color: var(--text-2); }
+
+    @media (max-width: 768px) {
+      .writing-wrap { padding: 1.5rem 1.25rem 3rem; }
+    }
+    @media (max-width: 600px) {
+      .essay-item { grid-template-columns: 1fr; gap: 0.6rem; }
+      .essay-meta-right { flex-direction: row; align-items: center; gap: 0.9rem; flex-wrap: wrap; }
+      .essay-date { padding-top: 0; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../" class="nav-logo">Jeremiah Dillon</a>
+      <ul class="nav-links">
+        <li><a href="../#about">About</a></li>
+        <li><a href="./" aria-current="page">Writing</a></li>
+        <li><a href="../#why">Why?</a></li>
+        <li><a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener" class="nav-cta">LinkedIn ↗</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="writing-wrap">
+
+    <!-- BREADCRUMB (mirrored in BreadcrumbList schema above) -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../">Home</a>
+      <span class="sep">/</span>
+      <span aria-current="page">Writing</span>
+    </nav>
+
+    <header class="writing-header">
+      <h1 class="writing-title">Writing</h1>
+      <p class="writing-intro">
+        For me, writing is a tool for thinking. More structure, more rigor.
+        Once in a while I jot down these ideas in public, to explore and pressure test them,
+        and see which ones survive contact with the page.
+        My focus is broadly the intersection of technology, markets, and society.
+      </p>
+    </header>
+
+    <!-- ESSAY LIST — every article, NEWEST FIRST. Add new rows at the top.
+         PASS 1: omit the .essay-alts span. PASS 2: add LinkedIn + Medium. -->
+    <div class="essay-list">
+      <div class="essay-item">
+        <div>
+          <a class="essay-title-link"
+             href="latent-liability-of-unreviewed-work/">
+            <p class="essay-title">The latent liability of unreviewed work</p>
+          </a>
+          <p class="essay-desc">AI-generated code is full of errors. The fact that we know this is encouraging. Knowledge work is surely much worse.</p>
+        </div>
+        <div class="essay-meta-right">
+          <span class="essay-date"><time datetime="2026-10-06">Oct 6, 2026</time> · 8 min read</span>
+        </div>
+      </div>
+      <div class="essay-item">
+        <div>
+          <a class="essay-title-link"
+             href="if-anyone-has-the-sword-everyone-needs-the-shield/">
+            <p class="essay-title">If anyone has the sword, everyone needs the shield</p>
+          </a>
+          <p class="essay-desc">Offense gets cheaper and faster with every model drop. Defense is still slow and expensive.</p>
+        </div>
+        <div class="essay-meta-right">
+          <span class="essay-date"><time datetime="2026-09-18">Sep 18, 2026</time> · 4 min read</span>
+          <span class="essay-alts">
+            <a class="essay-alt"
+               href="https://www.linkedin.com/pulse/anyone-has-sword-everyone-needs-shield-jeremiah-dillon-mvcic/"
+               target="_blank" rel="noopener">LinkedIn ↗</a>
+            <span class="sep">·</span>
+            <a class="essay-alt"
+               href="https://medium.com/@jeremiahdillon/if-anyone-has-the-sword-everyone-needs-the-shield-86bb795294f2"
+               target="_blank" rel="noopener">Medium ↗</a>
+          </span>
+        </div>
+      </div>
+      <div class="essay-item">
+        <div>
+          <a class="essay-title-link"
+             href="how-to-outrun-the-red-queen/">
+            <p class="essay-title">How to outrun the Red Queen</p>
+          </a>
+          <p class="essay-desc">The labs are racing each other. The rest of the stack is racing the labs.</p>
+        </div>
+        <div class="essay-meta-right">
+          <span class="essay-date"><time datetime="2026-07-18">Jul 18, 2026</time> · 5 min read</span>
+          <span class="essay-alts">
+            <a class="essay-alt"
+               href="https://www.linkedin.com/pulse/how-outrun-red-queen-jeremiah-dillon-hpqdc/"
+               target="_blank" rel="noopener">LinkedIn ↗</a>
+            <span class="sep">·</span>
+            <a class="essay-alt"
+               href="https://medium.com/@jeremiahdillon/how-to-outrun-the-red-queen-6747c580586c"
+               target="_blank" rel="noopener">Medium ↗</a>
+          </span>
+        </div>
+      </div>
+      <div class="essay-item">
+        <div>
+          <a class="essay-title-link"
+             href="that-agent-should-have-been-a-python-script/">
+            <p class="essay-title">No shade, but that agent should have been a Python script</p>
+          </a>
+          <p class="essay-desc">Agentic problems come in three shapes. We keep overengineering them into the hardest one.</p>
+        </div>
+        <div class="essay-meta-right">
+          <span class="essay-date"><time datetime="2026-06-18">Jun 18, 2026</time> · 6 min read</span>
+          <span class="essay-alts">
+            <a class="essay-alt"
+               href="https://www.linkedin.com/pulse/shade-agent-should-have-been-python-script-jeremiah-dillon-jqdzc/"
+               target="_blank" rel="noopener">LinkedIn ↗</a>
+            <span class="sep">·</span>
+            <a class="essay-alt"
+               href="https://medium.com/@jeremiahdillon/no-shade-but-that-agent-should-have-been-a-python-script-0a98069a4497"
+               target="_blank" rel="noopener">Medium ↗</a>
+          </span>
+        </div>
+      </div>
+      <div class="essay-item">
+        <div>
+          <a class="essay-title-link"
+             href="meet-matilda-my-school-briefing-agent/">
+            <p class="essay-title">Meet 🤖 MATILDA, my school briefing agent</p>
+          </a>
+          <p class="essay-desc">MATILDA happily reads the 1,000+ page school board packet so I don't have to.</p>
+        </div>
+        <div class="essay-meta-right">
+          <span class="essay-date"><time datetime="2026-06-12">Jun 12, 2026</time> · 8 min read</span>
+          <span class="essay-alts">
+            <a class="essay-alt"
+               href="https://www.linkedin.com/pulse/meet-matilda-my-school-briefing-agent-jeremiah-dillon-i9kpc/"
+               target="_blank" rel="noopener">LinkedIn ↗</a>
+            <span class="sep">·</span>
+            <a class="essay-alt"
+               href="https://medium.com/@jeremiahdillon/meet-matilda-my-school-briefing-agent-ec1f6a5255ee"
+               target="_blank" rel="noopener">Medium ↗</a>
+          </span>
+        </div>
+      </div>
+      <div class="essay-item">
+        <div>
+          <a class="essay-title-link"
+             href="soul-suggests-weights-decide/">
+            <p class="essay-title">The soul suggests. The weights decide.</p>
+          </a>
+          <p class="essay-desc">Every model has a worldview. Have you checked yours?</p>
+        </div>
+        <div class="essay-meta-right">
+          <span class="essay-date"><time datetime="2026-06-02">Jun 2, 2026</time> · 6 min read</span>
+          <span class="essay-alts">
+            <a class="essay-alt"
+               href="https://www.linkedin.com/pulse/soul-suggests-weights-decide-jeremiah-dillon-nlzoc/"
+               target="_blank" rel="noopener">LinkedIn ↗</a>
+            <span class="sep">·</span>
+            <a class="essay-alt"
+               href="https://medium.com/@jeremiahdillon/the-soul-suggests-the-weights-decide-28dfb62f0040"
+               target="_blank" rel="noopener">Medium ↗</a>
+          </span>
+        </div>
+      </div>
+      <div class="essay-item">
+        <div>
+          <a class="essay-title-link"
+             href="meet-atlas-my-travel-agent/">
+            <p class="essay-title">Meet 🤖 ATLAS, my travel agent… agent</p>
+          </a>
+          <p class="essay-desc">My first agent that was immediately useful, with some asterisks.</p>
+        </div>
+        <div class="essay-meta-right">
+          <span class="essay-date"><time datetime="2026-05-26">May 26, 2026</time> · 6 min read</span>
+          <span class="essay-alts">
+            <a class="essay-alt"
+               href="https://www.linkedin.com/pulse/meet-atlas-my-travel-agent-jeremiah-dillon-sjqvc/"
+               target="_blank" rel="noopener">LinkedIn ↗</a>
+            <span class="sep">·</span>
+            <a class="essay-alt"
+               href="https://medium.com/@jeremiahdillon/meet-atlas-my-travel-agent-agent-e355d54e1eb7"
+               target="_blank" rel="noopener">Medium ↗</a>
+          </span>
+        </div>
+      </div>
+      <div class="essay-item">
+        <div>
+          <a class="essay-title-link"
+             href="end-of-the-ai-free-lunch/">
+            <p class="essay-title">The end of the AI free lunch</p>
+          </a>
+          <p class="essay-desc">The repricing is inevitable. The rollout is under your control.</p>
+        </div>
+        <div class="essay-meta-right">
+          <span class="essay-date"><time datetime="2026-05-21">May 21, 2026</time> · 5 min read</span>
+          <span class="essay-alts">
+            <a class="essay-alt"
+               href="https://www.linkedin.com/pulse/end-ai-free-lunch-jeremiah-dillon-sha3c/"
+               target="_blank" rel="noopener">LinkedIn ↗</a>
+            <span class="sep">·</span>
+            <a class="essay-alt"
+               href="https://medium.com/@jeremiahdillon/the-end-of-the-ai-free-lunch-56e48bebc49a"
+               target="_blank" rel="noopener">Medium ↗</a>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div style="display: flex; flex-direction: column; gap: 0.3rem;">
+        <span class="footer-copy">Coded with Claude Opus 4.8 · <a href="https://github.com/jeremiahdillon/jeremiahdillon-site" target="_blank" rel="noopener">Source on GitHub</a> · Served via Vercel</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/jeremiahdillon/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/jeremiahdillon" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://x.com/jeremiahdillon" target="_blank" rel="noopener">X</a></li>
+        <li><a href="https://medium.com/@jeremiahdillon" target="_blank" rel="noopener">Medium</a></li>
+        <li><a href="https://www.fastcompany.com/user/jeremiah-dillon" target="_blank" rel="noopener">Fast Company</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Vercel Web Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
